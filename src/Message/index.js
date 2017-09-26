@@ -15,6 +15,7 @@ export default class Message {
     */
   constructor(messageData) {
     this.id = messageData.id; // id of the sender (0 is reserved for "blue bubble")
+    this.time_sent_at = messageData.time_sent_at || undefined
     this.message = messageData.message;
     this.senderName = messageData.senderName || undefined;
   }

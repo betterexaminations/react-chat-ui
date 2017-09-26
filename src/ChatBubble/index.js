@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles';
+import Moment from 'react-moment';
 
 export default class ChatBubble extends Component {
   componentDidMount() {}
@@ -9,6 +10,7 @@ export default class ChatBubble extends Component {
   renderBlueBubble() {
     const { message, bubbleStyles, bubblesCentered } = this.props;
     const { userBubble, chatbubble, text } = bubbleStyles;
+    console.log(message)
     return (
       <div
         style={{
@@ -25,7 +27,7 @@ export default class ChatBubble extends Component {
         >
           <p style={{ ...styles.p, ...text }}>{message.message}</p>
         </div>
-        test
+        <small><Moment unix>{message.time_sent_at}</Moment></small>
       </div>
     );
   }

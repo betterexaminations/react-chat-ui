@@ -25,6 +25,7 @@ export default class ChatBubble extends Component {
         >
           <p style={{ ...styles.p, ...text }}>{message.message}</p>
         </div>
+        test
       </div>
     );
   }
